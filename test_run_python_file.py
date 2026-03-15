@@ -1,0 +1,31 @@
+from functions.run_python_file import run_python_file
+
+
+def main():
+
+    test1 = run_python_file("calculator", "main.py")
+    test2 = run_python_file("calculator", "main.py", ["3 + 5"])
+    test3 = run_python_file("calculator", "tests.py")
+    test4 = run_python_file("calculator", "../main.py")
+    test5 = run_python_file("calculator", "nonexistent.py")
+    test6 = run_python_file("calculator", "lorem.txt")
+
+    print(test1)
+    print(test2)
+    print(test3)
+    print(test4)
+    print(test5)
+    print(test6)
+
+    return {
+        "test1_results": test1,
+        "test2_results": test2,
+        "test3_results": test3,
+        "test4_results": test4,
+        "test5_results": test5,
+        "test6_results": test6,
+    }
+
+
+if __name__ == "__main__":
+    main()
