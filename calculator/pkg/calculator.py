@@ -9,6 +9,7 @@ class Calculator:
             "*": lambda a, b: a * b,
             "/": lambda a, b: a / b,
         }
+        # Fixed precedence: * and / should have higher precedence than + and -
         self.precedence = {
             "+": 1,
             "-": 1,
